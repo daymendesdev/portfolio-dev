@@ -1,0 +1,72 @@
+*{
+    margin:0;
+    padding: 0;
+}
+
+body{
+    background-color: #222222;
+}
+
+.header-nav{
+    display: flex;
+    justify-content: space-around;
+    background-color: #1A1A1A;
+    width: 100vw;
+    align-items: center;
+    height: 4em;
+   
+
+}
+
+h2{
+    color: #A65DCA;
+    font-size: 2.1rem;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 1em;
+    display: inline-block;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+a:hover{
+    color: #A65DCA;
+}
+
+main{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+main h2{
+    color: white;
+}
+
+main p {
+    color: white;
+    font-size: 1.2rem;
+}
+
+.destaque{
+    color: #A65DCA;
+    text-transform: uppercase;
+}
+
+main::before{
+    content: "";
+    background: url("/assets/image/background.svg");
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    z-index: -1; 
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
