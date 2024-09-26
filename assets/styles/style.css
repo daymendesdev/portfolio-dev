@@ -7,6 +7,7 @@ body{
     background-color: #222222;
 }
 
+
 .header-nav{
     display: flex;
     justify-content: space-around;
@@ -39,17 +40,20 @@ a:hover{
     color: #A65DCA;
 }
 
-main{
+.container-apresentacao{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    opacity: 0;
+    transform: translateX(-100%);
+    transition: opacity 0.5s ease, transform 0.5s ease
 }
 
-main h2{
+.container-apresentacao h2{
     color: white;
 }
 
-main p {
+.container-apresentacao p {
     color: white;
     font-size: 1.2rem;
 }
@@ -59,14 +63,37 @@ main p {
     text-transform: uppercase;
 }
 
-main::before{
+.container-apresentacao::before{
     content: "";
     background: url("/assets/image/background.svg");
     position: absolute; 
     width: 100%; 
-    height: 100%; 
+    height: 86%; 
     z-index: -1; 
     background-position: right center;
     background-repeat: no-repeat;
     background-size: contain;
 }
+
+/*Animação do container-apresentação*/
+
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.animated {
+    animation: slideIn 3s forwards;
+}
+
+
+/*Fim da animação*/
+
+
