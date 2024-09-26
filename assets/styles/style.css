@@ -67,8 +67,8 @@ a:hover{
     content: "";
     background: url("/assets/image/background.svg");
     position: absolute; 
-    width: 100%; 
-    height: 86%; 
+    width: 100vw; 
+    height: 100%; 
     z-index: -1; 
     background-position: right center;
     background-repeat: no-repeat;
@@ -96,4 +96,36 @@ a:hover{
 
 /*Fim da animação*/
 
+.sobre-mim{
+    align-items: center;
+    display: flex;
+    flex-direction:row;
+    justify-content: space-around;
+}
+.sobre p{
+    color: white;
+    font-size: 1.2rem;
+    text-align: justify;
+    width: 40vw;
+}
 
+.sobre-image::before{
+    content: "";
+    background-color: #A65DCA;
+    position: absolute; 
+    width: 35%;
+    border-radius: 10px; 
+    height: 15%; 
+    z-index: -1; 
+    bottom: -80%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+
+.destaque-2{
+    color: #EBA5BB;
+    font-weight: 500;
+    font-size: 3rem;
+}
