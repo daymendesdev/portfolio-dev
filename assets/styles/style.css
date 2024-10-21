@@ -129,3 +129,14 @@ a:hover{
     font-weight: 500;
     font-size: 3rem;
 }
+
+.card-habilidades{
+    display: flex;
+    align-items:  ;
+}
+
+
+.card{
+    background-color: #222222;
+    width: 15em;
+}
