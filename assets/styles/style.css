@@ -1,12 +1,10 @@
-*{
-    margin:0;
-    padding: 0;
-}
-
 body{
     background-color: #222222;
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    overflow-x: hidden !important;
 }
-
 
 .header-nav{
     display: flex;
@@ -15,8 +13,6 @@ body{
     width: 100vw;
     align-items: center;
     height: 4em;
-   
-
 }
 
 h2{
@@ -26,7 +22,7 @@ h2{
 
 ul li{
     list-style: none;
-    margin-left: 1em;
+    padding-left: 1em;
     display: inline-block;
 }
 
@@ -109,21 +105,6 @@ a:hover{
     width: 40vw;
 }
 
-.sobre-image::before{
-    content: "";
-    background-color: #A65DCA;
-    position: absolute; 
-    width: 35%;
-    border-radius: 10px; 
-    height: 15%; 
-    z-index: -1; 
-    bottom: -80%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: contain;
-}
-
-
 .destaque-2{
     color: #EBA5BB;
     font-weight: 500;
@@ -131,9 +112,9 @@ a:hover{
 }
 
 .habilidades{
-    margin-top{
+    margin-top: 2em;
         
-    }
+    
 }
 .cards-habilidades{
     display: flex;
