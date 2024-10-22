@@ -4,6 +4,7 @@ body{
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden !important;
+    user-select: none;
 }
 
 .header-nav{
@@ -125,5 +126,8 @@ a:hover{
 }
 
 .card img{
-    width: 15em;
+    width: 15em; 
+    height: 15em; 
+    object-fit: contain; 
 }
+
