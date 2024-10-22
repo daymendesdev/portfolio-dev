@@ -130,13 +130,19 @@ a:hover{
     font-size: 3rem;
 }
 
-.card-habilidades{
-    display: flex;
-    align-items:  ;
+.habilidades{
+    margin-top{
+        
+    }
 }
-
+.cards-habilidades{
+    display: flex;
+}
 
 .card{
     background-color: #222222;
+}
+
+.card img{
     width: 15em;
 }
