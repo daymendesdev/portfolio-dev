@@ -110,6 +110,7 @@ a:hover{
     color: #EBA5BB;
     font-weight: 500;
     font-size: 3rem;
+    margin-bottom: 2em;
 }
 
 .habilidades{
@@ -119,15 +120,33 @@ a:hover{
 }
 .cards-habilidades{
     display: flex;
+    justify-content: center;
 }
 
 .card{
     background-color: #222222;
+    margin-left: 3em;
+    display: flex;
+    align-items: center;
 }
 
 .card img{
-    width: 15em; 
-    height: 15em; 
+    width: 10em;
+    height: 10em; 
     object-fit: contain; 
 }
 
+.habilidades h2{
+    text-align: center;
+}
+
+.sub-card{
+    color: #A65DCA;
+    justify-content: center;
+}
+
+.nivel-card{
+    color: white;
+    text-transform: uppercase;
+}
+    
