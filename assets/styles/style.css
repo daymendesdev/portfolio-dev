@@ -150,3 +150,11 @@ a:hover{
     text-transform: uppercase;
 }
     
+
+.projetos h2{
+    margin-top: 2em;
+    justify-content: center;
+    display: flex;
+}
+
+
