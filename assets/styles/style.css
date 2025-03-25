@@ -1,13 +1,13 @@
-body{
+body {
     background-color: #222222;
-    margin:0;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     overflow-x: hidden !important;
     user-select: none;
 }
 
-.header-nav{
+.header-nav {
     display: flex;
     justify-content: space-around;
     background-color: #1A1A1A;
@@ -16,28 +16,28 @@ body{
     height: 4em;
 }
 
-h2{
+h2 {
     color: #A65DCA;
     font-size: 2.1rem;
 }
 
-ul li{
+ul li {
     list-style: none;
     padding-left: 1em;
     display: inline-block;
 }
 
-a{
+a {
     text-decoration: none;
     color: white;
     font-weight: 600;
 }
 
-a:hover{
+a:hover {
     color: #A65DCA;
 }
 
-.container-apresentacao{
+.container-apresentacao {
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -46,7 +46,7 @@ a:hover{
     transition: opacity 0.5s ease, transform 0.5s ease
 }
 
-.container-apresentacao h2{
+.container-apresentacao h2 {
     color: white;
 }
 
@@ -55,18 +55,18 @@ a:hover{
     font-size: 1.2rem;
 }
 
-.destaque{
+.destaque {
     color: #A65DCA;
     text-transform: uppercase;
 }
 
-.container-apresentacao::before{
+.container-apresentacao::before {
     content: "";
     background: url("/assets/image/background.svg");
-    position: absolute; 
-    width: 100vw; 
-    height: 100%; 
-    z-index: -1; 
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
     background-position: right center;
     background-repeat: no-repeat;
     background-size: contain;
@@ -80,6 +80,7 @@ a:hover{
         opacity: 0;
         transform: translateX(-100%);
     }
+
     to {
         opacity: 1;
         transform: translateX(0);
@@ -93,118 +94,127 @@ a:hover{
 
 /*Fim da animação*/
 
-.sobre-mim{
+.sobre-mim {
     align-items: center;
     display: flex;
-    flex-direction:row;
+    flex-direction: row;
     justify-content: space-around;
 }
-.sobre p{
+
+.sobre p {
     color: white;
     font-size: 1.2rem;
     text-align: justify;
     width: 40vw;
 }
 
-.destaque-2{
+.destaque-2 {
     color: #EBA5BB;
     font-weight: 500;
     font-size: 3rem;
     margin-bottom: 2em;
 }
 
-.habilidades{
+.habilidades {
     margin-top: 2em;
-        
-    
+
+
 }
-.cards-habilidades{
+
+.cards-habilidades {
     display: flex;
     justify-content: center;
 }
 
-.card{
+.card {
     background-color: #222222;
     margin-left: 3em;
     display: flex;
     align-items: center;
 }
 
-.card img{
+.card img {
     width: 10em;
-    height: 10em; 
-    object-fit: contain; 
+    height: 10em;
+    object-fit: contain;
 }
 
-.habilidades h2{
+.habilidades h2 {
     text-align: center;
 }
 
-.sub-card{
+.sub-card {
     color: #A65DCA;
     justify-content: center;
 }
 
-.nivel-card{
+.nivel-card {
     color: white;
     text-transform: uppercase;
 }
-    
 
-.projetos h2{
+.projeto{
+    display: flex;
+    flex-direction: column;
+}
+
+.projetos-cards{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.projeto h2 {
+ 
     margin-top: 2em;
     justify-content: center;
     display: flex;
 }
 
 .projetos {
-    flex-direction: column;
     align-items: center;
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-  margin: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
-.projeto {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  width: 250px;
-  margin: 10px;
-  padding: 20px;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+.projetos {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 250px;
+    margin: 10px;
+    padding: 5px;
+    text-align: center;
 }
 
-.projeto img {
-  width: 100%;
-  border-radius: 8px;
+.projetos img {
+    width: 100%;
+    border-radius: 8px;
 }
 
-.projeto h2 {
-  font-size: 1.5rem;
-  margin: 10px 0;
+.projetos h2 {
+    font-size: 1.5rem;
+    margin: 10px 0;
 }
 
-.projeto p {
-  font-size: 1rem;
-  color: #666;
+.projetos p {
+    font-size: 1rem;
+    color: #666;
 }
 
 .btn {
-  display: inline-block;
-  background-color: #007BFF;
-  color: white;
-  padding: 10px 20px;
-  margin-top: 10px;
-  text-decoration: none;
-  border-radius: 4px;
-  transition: background-color 0.3s;
+    display: inline-block;
+    background-color: #007BFF;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 10px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
 }
 
 .btn:hover {
-  background-color: #0056b3;
+    background-color: #0056b3;
+    color: white;
 }
-
-
