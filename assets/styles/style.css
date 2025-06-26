@@ -29,10 +29,15 @@ body {
     background-color: var(--bg-dark);
     margin: 0;
     padding: 0;
-    padding-top: 70px;
+    padding-top: 90px;
     box-sizing: border-box;
     overflow-x: hidden !important;
     user-select: none;
+}
+
+.container {
+    margin-top: 20px;
+    min-height: calc(100vh - 90px);
 }
 
 .header-nav {
@@ -108,7 +113,9 @@ body {
     justify-content: space-around;
     opacity: 0;
     transform: translateX(-100%);
-    transition: opacity 0.5s ease, transform 0.5s ease
+    transition: opacity 0.5s ease, transform 0.5s ease;
+    min-height: calc(100vh - 110px);
+    padding: 2rem 0;
 }
 
 .container-apresentacao h2 {
@@ -125,20 +132,29 @@ body {
     text-transform: uppercase;
 }
 
-.container-apresentacao::before {
-    content: "";
-    background: url("/assets/image/background.svg");
+.container-apresentacao-imagem-background {
     position: absolute;
-    width: 100vw;
+    top: 0;
+    right: 0;
+    width: 100%;
     height: 100%;
-    z-index: -1;
-    background-position: right center;
-    background-repeat: no-repeat;
+    background: url("/assets/image/background.svg") right top no-repeat;
     background-size: contain;
+    pointer-events: none;
+    z-index: 0;
 }
 
-/*Animação do container-apresentação*/
+.apresentacao {
+    transform: translateY(-165px);
+}
 
+.imagem-developer {
+    transform: translateY(-165px);
+}
+
+.imagem-developer img{
+    width: 350px;
+}
 
 @keyframes slideIn {
     from {
@@ -155,9 +171,6 @@ body {
 .animated {
     animation: slideIn 3s forwards;
 }
-
-
-/*Fim da animação*/
 
 .sobre-mim {
     align-items: center;
@@ -349,387 +362,4 @@ body {
 .btn:hover {
     background: var(--hover-primary);
     color: var(--text-white);
-}
-
-
-@media (min-width: 1200px) {
-    .projetos {
-        min-height: 520px;
-    }
-    
-    .projetos img {
-        height: 240px;
-    }
-    
-    .projeto-content {
-        height: calc(100% - 240px);
-    }
-    
-    .cards-habilidades {
-        grid-template-columns: repeat(4, 1fr);
-        gap: 2.5rem;
-    }
-    
-    .card img {
-        width: 100px;
-        height: 100px;
-    }
-    
-    .container-apresentacao {
-        padding: 0 4rem;
-    }
-    
-    .sobre-mim {
-        padding: 0 4rem;
-    }
-    
-    .sobre p {
-        width: 45vw;
-        font-size: 1.3rem;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1199px) {
-    .projetos {
-        min-height: 500px;
-    }
-    
-    .projetos img {
-        height: 220px;
-    }
-    
-    .projeto-content {
-        height: calc(100% - 220px);
-    }
-    
-    .cards-habilidades {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
-    }
-    
-    .card img {
-        width: 90px;
-        height: 90px;
-    }
-    
-    .container-apresentacao {
-        padding: 0 2rem;
-    }
-    
-    .sobre-mim {
-        padding: 0 2rem;
-    }
-    
-    .sobre p {
-        width: 50vw;
-        font-size: 1.2rem;
-    }
-}
-
-
-@media (max-width: 768px) {
-    .projetos-cards {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-        padding: 0 1rem;
-    }
-    
-    .projetos {
-        min-height: 480px;
-    }
-    
-    .projetos img {
-        height: 200px;
-    }
-    
-    .projeto-content {
-        height: calc(100% - 200px);
-        padding: 1.5rem;
-    }
-    
-    .projeto h2 {
-        font-size: 2.5rem;
-        margin-bottom: 2rem;
-    }
-    
-    .projetos h2 {
-        font-size: 1.5rem;
-    }
-    
-    .projetos p {
-        font-size: 0.95rem;
-    }
-    
-    .btn {
-        padding: 12px 24px;
-        font-size: 0.9rem;
-    }
-    
-    .habilidades {
-        padding: 0 1rem;
-    }
-    
-    .cards-habilidades {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1.5rem;
-    }
-    
-    .card {
-        padding: 1.2rem;
-        max-width: 160px;
-    }
-    
-    .card img {
-        width: 70px;
-        height: 70px;
-    }
-    
-    .sub-card {
-        font-size: 1.1rem;
-    }
-    
-    .nivel-card {
-        font-size: 0.8rem;
-    }
-    
-    .container-apresentacao {
-        flex-direction: column;
-        text-align: center;
-        padding: 0 1rem;
-        gap: 2rem;
-    }
-    
-    .container-apresentacao h2 {
-        font-size: 2rem;
-    }
-    
-    .container-apresentacao p {
-        font-size: 1rem;
-    }
-    
-    .sobre-mim {
-        flex-direction: column;
-        text-align: center;
-        padding: 0 1rem;
-        gap: 2rem;
-    }
-    
-    .sobre-image img {
-        width: 200px;
-        height: 200px;
-    }
-    
-    .sobre p {
-        width: 100%;
-        font-size: 1rem;
-    }
-    
-    .destaque-2 {
-        font-size: 2.5rem;
-    }
-    
-    .header-nav {
-        padding: 0 1rem;
-        height: 60px;
-    }
-    
-    .header-nav h2 {
-        font-size: 1.5rem;
-    }
-    
-    .nav-bar ul {
-        gap: 1rem;
-    }
-    
-    .nav-bar a {
-        font-size: 0.9rem;
-        padding: 0.4rem 0.8rem;
-    }
-    
-    body {
-        padding-top: 60px;
-    }
-}
-
-@media (max-width: 480px) {
-    .projetos {
-        min-height: 450px;
-    }
-    
-    .projetos img {
-        height: 180px;
-    }
-    
-    .projeto-content {
-        height: calc(100% - 180px);
-        padding: 1.2rem;
-    }
-    
-    .projetos h2 {
-        font-size: 1.4rem;
-    }
-    
-    .projetos p {
-        font-size: 0.9rem;
-    }
-    
-    .btn {
-        padding: 10px 20px;
-        font-size: 0.85rem;
-    }
-    
-    .cards-habilidades {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-    
-    .card {
-        max-width: 200px;
-        padding: 1.5rem;
-    }
-    
-    .card img {
-        width: 80px;
-        height: 80px;
-    }
-    
-    .sub-card {
-        font-size: 1.2rem;
-    }
-    
-    .nivel-card {
-        font-size: 0.9rem;
-    }
-    
-    .container-apresentacao h2 {
-        font-size: 1.8rem;
-    }
-    
-    .container-apresentacao p {
-        font-size: 0.95rem;
-    }
-    
-    .sobre-image img {
-        width: 180px;
-        height: 180px;
-    }
-    
-    .sobre p {
-        font-size: 0.95rem;
-    }
-    
-    .destaque-2 {
-        font-size: 2.2rem;
-    }
-    
-    .header-nav {
-        padding: 0 0.8rem;
-        height: 55px;
-    }
-    
-    .header-nav h2 {
-        font-size: 1.3rem;
-    }
-    
-    .nav-bar ul {
-        gap: 0.5rem;
-    }
-    
-    .nav-bar a {
-        font-size: 0.8rem;
-        padding: 0.3rem 0.6rem;
-    }
-    
-    body {
-        padding-top: 55px;
-    }
-}
-
-@media (max-width: 360px) {
-    .projetos {
-        min-height: 420px;
-    }
-    
-    .projetos img {
-        height: 160px;
-    }
-    
-    .projeto-content {
-        height: calc(100% - 160px);
-        padding: 1rem;
-    }
-    
-    .projetos h2 {
-        font-size: 1.3rem;
-    }
-    
-    .projetos p {
-        font-size: 0.85rem;
-    }
-    
-    .btn {
-        padding: 8px 16px;
-        font-size: 0.8rem;
-    }
-    
-    .card {
-        padding: 1rem;
-        max-width: 180px;
-    }
-    
-    .card img {
-        width: 70px;
-        height: 70px;
-    }
-    
-    .sub-card {
-        font-size: 1.1rem;
-    }
-    
-    .nivel-card {
-        font-size: 0.8rem;
-    }
-    
-    .container-apresentacao h2 {
-        font-size: 1.6rem;
-    }
-    
-    .container-apresentacao p {
-        font-size: 0.9rem;
-    }
-    
-    .sobre-image img {
-        width: 160px;
-        height: 160px;
-    }
-    
-    .sobre p {
-        font-size: 0.9rem;
-    }
-    
-    .destaque-2 {
-        font-size: 2rem;
-    }
-    
-    .header-nav {
-        padding: 0 0.5rem;
-        height: 50px;
-    }
-    
-    .header-nav h2 {
-        font-size: 1.2rem;
-    }
-    
-    .nav-bar ul {
-        gap: 0.3rem;
-    }
-    
-    .nav-bar a {
-        font-size: 0.75rem;
-        padding: 0.2rem 0.4rem;
-    }
-    
-    body {
-        padding-top: 50px;
-    }
 }
