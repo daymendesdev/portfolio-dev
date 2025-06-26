@@ -63,6 +63,19 @@ body {
     letter-spacing: 1px;
 }
 
+.header-nav img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse{
+    20%{
+        transform: scale(1.1);
+    }
+}
+
 .nav-bar ul {
     display: flex;
     list-style: none;
@@ -114,8 +127,8 @@ body {
     opacity: 0;
     transform: translateX(-100%);
     transition: opacity 0.5s ease, transform 0.5s ease;
-    min-height: calc(100vh - 110px);
-    padding: 2rem 0;
+    min-height: 100vh;
+    padding: 1rem 0;
 }
 
 .container-apresentacao h2 {
@@ -150,7 +163,7 @@ body {
 }
 
 .imagem-developer {
-    transform: translateY(-116px);
+    transform: translateY(-100px);
     width: 450px;
 }
 
@@ -198,7 +211,9 @@ body {
 
 .habilidades h2 {
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 0.8em;
+    margin-top: 1.5em;
+    font-size: 2.5rem;
 }
 
 .sub-card {
@@ -218,8 +233,10 @@ body {
 .projeto{
     display: flex;
     flex-direction: column;
-    padding: 3rem 0;
     background: var(--bg-dark);
+    margin-top: 0.5em;
+    margin-bottom: 1.5rem;
+    position: relative;
 }
 
 .projeto::before {
@@ -246,7 +263,7 @@ body {
     margin-top: 2em;
     justify-content: center;
     display: flex;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     text-align: center;
 }
 
@@ -328,29 +345,75 @@ body {
 }
 
 .sobre-mim {
-    align-items: center;
     display: flex;
-    flex-direction: row;
+    align-items: center;
     justify-content: space-around;
+    margin-top: 0.5em;
+    position: relative;
+}
+
+.sobre-decorativo {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 350px;
+}
+
+.decorativo-elemento {
+    width: 300px;
+    height: 300px;
+    background: transparent;
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.decorativo-elemento::before {
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border: 2px solid var(--secondary-color);
+    border-radius: 50%;
+}
+
+.decorativo-elemento::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: var(--accent-color);
+    border-radius: 50%;
+    opacity: 0.7;
+}
+
+.sobre {
+    flex: 1;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .sobre p {
     color: var(--text-white);
     font-size: 1.2rem;
     text-align: justify;
-    width: 40vw;
+    width: 100%;
+    line-height: 1.8;
 }
 
 .destaque-2 {
     color: var(--secondary-color);
     font-weight: 500;
-    font-size: 3rem;
-    margin-bottom: 2em;
-}
-
-.habilidades {
-    margin-top: 2em;
-    padding: 0 2rem;
+    font-size: 2.5rem;
+    margin-bottom: 0.8em;
+    margin-top: 1.5em;
 }
 
 .cards-habilidades {
@@ -360,4 +423,123 @@ body {
     max-width: 1000px;
     margin: 0 auto;
     justify-items: center;
+}
+
+.contato {
+    margin-top: 0.5em;
+    position: relative;
+    text-align: center;
+}
+
+
+.form-contato {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    background: var(--bg-card);
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem 1.5rem;
+    background: var(--bg-card-dark);
+    border: 2px solid var(--border-color);
+    border-radius: 12px;
+    color: var(--text-white);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    outline: none;
+    font-family: inherit;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: var(--text-muted);
+    font-weight: 400;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(166, 93, 202, 0.1);
+    transform: translateY(-2px);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-enviar {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    color: var(--text-white);
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-enviar::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+.btn-enviar:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(166, 93, 202, 0.3);
+}
+
+.btn-enviar:hover::before {
+    left: 100%;
+}
+
+.btn-enviar:active {
+    transform: translateY(-1px);
+}
+
+/* Responsividade para o formulário */
+@media (max-width: 768px) {
+    .form-contato {
+        margin: 0 1rem;
+        padding: 1.5rem;
+    }
+    
+    .form-group input,
+    .form-group textarea {
+        padding: 0.8rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    .btn-enviar {
+        padding: 0.8rem 1.5rem;
+        font-size: 1rem;
+    }
+}
+
+.habilidades {
+    margin-top: 0.5em;
 }

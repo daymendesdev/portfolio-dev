@@ -13,7 +13,7 @@
 <body>
 
     <header class="header-nav">
-        <h2>DM</h2>
+        <img src="/assets/image/logo.png" alt="logo">
         <nav class="nav-bar">
             <ul>
                 <li><a href="#">Início</a></li>
@@ -46,9 +46,9 @@
             </div>
 
             <div class="sobre-mim">
-                <section class="sobre-image">
-                    <img src="/assets/image/developer.svg" alt="Foto da desenvolvedora">
-                </section>
+                <div class="sobre-decorativo">
+                    <div class="decorativo-elemento"></div>
+                </div>
 
                 <section class="sobre">
                     <h2 class="destaque-2">Sobre mim</h2>
@@ -114,16 +114,33 @@
         </div>
 
         <div class="projetos">
-            <img src="/assets/image/Astroo.png" alt="Projeto Mania Games">
+            <img src="/assets/image/manutenção.png" alt="Projeto Mania Games">
             <div class="projeto-content">
                 <h2>Mania Games</h2>
                 <p>"Mania Games" é um site desenvolvido para uma loja física de games e playgrounds localizada em um shopping, com o objetivo de proporcionar aos visitantes uma experiência online que complemente a presença física da loja.</p>
-                <a href="https://mania-games.vercel.app/" target="_blank" class="btn">Ver Projeto</a>
+                <a href="#" target="_blank" class="btn">Ver Projeto</a>
             </div>
         </div>
     </div>
 
 </section>
+
+<section class="contato">
+    <h2 class="destaque-2">Entre em contato</h2>
+    <form class="form-contato" id="formContato">
+        <div class="form-group">
+            <input type="text" placeholder="Nome" id="nome">
+        </div>
+        <div class="form-group">
+            <input type="text" placeholder="Assunto" id="assunto">
+        </div>
+        <div class="form-group">
+            <textarea placeholder="Mensagem" id="mensagem" rows="5" required></textarea>
+        </div>
+        <button type="submit" class="btn-enviar">Enviar Mensagem</button>
+    </form>
+</section>
+
     </main>
 
 
