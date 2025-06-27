@@ -1,6 +1,8 @@
 window.addEventListener('load', () => {
-    const containerApresentacao = document.querySelector('.container-apresentacao');
-    containerApresentacao.classList.add('animated');
+    setTimeout(() => {
+        const containerApresentacao = document.querySelector('.container-apresentacao');
+        containerApresentacao.classList.add('animated');
+    }, 100);
 });
 
 document.getElementById('formContato').addEventListener('submit', function(e) {
